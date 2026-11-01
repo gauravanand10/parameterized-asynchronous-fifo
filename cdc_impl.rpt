@@ -1,0 +1,21 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Wed Oct 21 21:15:37 2026
+| Host         : Local workstation running 64-bit major release (build 9200)
+| Command      : report_cdc -file ./reports/cdc_impl.rpt
+| Design       : basys3_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock        Destination Clock   CDC Type                 Exceptions  Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  ------------------  ------------------  -----------------------  ----------  ---------  ----  ------  -------  ------------  
+Info      clk_out2_clk_wiz_0  clk_out1_clk_wiz_0  Safely Timed             None                5     5       0        0             0  
+Info      input port clock    clk_out1_clk_wiz_0  No Common Primary Clock  False Path         14    14       0        0             0  
+Info      clk_out1_clk_wiz_0  clk_out2_clk_wiz_0  Safely Timed             None               29    29       0        0             0  
+Info      input port clock    clk_out2_clk_wiz_0  No Common Primary Clock  False Path          3     3       0        0             0  
+
