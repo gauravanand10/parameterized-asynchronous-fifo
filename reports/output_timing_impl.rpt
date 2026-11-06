@@ -1,0 +1,593 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Wed Oct 21 21:15:37 2026
+| Host         : Local workstation running 64-bit major release (build 9200)
+| Command      : report_timing -to [all_outputs] -delay_type max -max_paths 20 -file ./reports/output_timing_impl.rpt
+| Design       : basys3_top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 display_data_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.635ns  (logic 3.970ns (41.208%)  route 5.665ns (58.792%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.606    -0.906    rclk
+    SLICE_X62Y75         FDCE                                         r  display_data_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y75         FDCE (Prop_fdce_C_Q)         0.456    -0.450 r  display_data_reg[5]/Q
+                         net (fo=1, routed)           5.665     5.215    LED_OBUF[5]
+    U15                  OBUF (Prop_obuf_I_O)         3.514     8.729 r  LED_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     8.729    LED[5]
+    U15                                                               r  LED[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.408ns  (logic 3.961ns (42.098%)  route 5.448ns (57.902%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.609    -0.903    rclk
+    SLICE_X63Y72         FDCE                                         r  display_data_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y72         FDCE (Prop_fdce_C_Q)         0.456    -0.447 r  display_data_reg[0]/Q
+                         net (fo=1, routed)           5.448     5.001    LED_OBUF[0]
+    U16                  OBUF (Prop_obuf_I_O)         3.505     8.506 r  LED_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     8.506    LED[0]
+    U16                                                               r  LED[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.404ns  (logic 3.960ns (42.110%)  route 5.444ns (57.890%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.612    -0.900    rclk
+    SLICE_X61Y70         FDCE                                         r  display_data_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y70         FDCE (Prop_fdce_C_Q)         0.456    -0.444 r  display_data_reg[8]/Q
+                         net (fo=1, routed)           5.444     5.000    LED_OBUF[8]
+    V13                  OBUF (Prop_obuf_I_O)         3.504     8.504 r  LED_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     8.504    LED[8]
+    V13                                                               r  LED[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.068ns  (logic 3.962ns (43.692%)  route 5.106ns (56.308%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.612    -0.900    rclk
+    SLICE_X61Y70         FDCE                                         r  display_data_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y70         FDCE (Prop_fdce_C_Q)         0.456    -0.444 r  display_data_reg[6]/Q
+                         net (fo=1, routed)           5.106     4.662    LED_OBUF[6]
+    U14                  OBUF (Prop_obuf_I_O)         3.506     8.168 r  LED_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     8.168    LED[6]
+    U14                                                               r  LED[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.023ns  (logic 3.965ns (43.939%)  route 5.058ns (56.061%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.607    -0.905    rclk
+    SLICE_X61Y73         FDCE                                         r  display_data_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y73         FDCE (Prop_fdce_C_Q)         0.456    -0.449 r  display_data_reg[4]/Q
+                         net (fo=1, routed)           5.058     4.609    LED_OBUF[4]
+    W18                  OBUF (Prop_obuf_I_O)         3.509     8.118 r  LED_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     8.118    LED[4]
+    W18                                                               r  LED[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.864ns  (logic 3.965ns (44.732%)  route 4.899ns (55.268%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.607    -0.905    rclk
+    SLICE_X61Y73         FDCE                                         r  display_data_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y73         FDCE (Prop_fdce_C_Q)         0.456    -0.449 r  display_data_reg[3]/Q
+                         net (fo=1, routed)           4.899     4.450    LED_OBUF[3]
+    V19                  OBUF (Prop_obuf_I_O)         3.509     7.959 r  LED_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     7.959    LED[3]
+    V19                                                               r  LED[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.826ns  (logic 3.957ns (44.828%)  route 4.870ns (55.172%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.605    -0.907    rclk
+    SLICE_X61Y74         FDCE                                         r  display_data_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y74         FDCE (Prop_fdce_C_Q)         0.456    -0.451 r  display_data_reg[7]/Q
+                         net (fo=1, routed)           4.870     4.419    LED_OBUF[7]
+    V14                  OBUF (Prop_obuf_I_O)         3.501     7.919 r  LED_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     7.919    LED[7]
+    V14                                                               r  LED[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.808ns  (logic 3.957ns (44.926%)  route 4.851ns (55.074%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.607    -0.905    rclk
+    SLICE_X61Y73         FDCE                                         r  display_data_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y73         FDCE (Prop_fdce_C_Q)         0.456    -0.449 r  display_data_reg[2]/Q
+                         net (fo=1, routed)           4.851     4.402    LED_OBUF[2]
+    U19                  OBUF (Prop_obuf_I_O)         3.501     7.903 r  LED_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     7.903    LED[2]
+    U19                                                               r  LED[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.338ns  (logic 4.048ns (48.543%)  route 4.291ns (51.457%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.611    -0.901    rclk
+    SLICE_X60Y71         FDCE                                         r  display_data_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y71         FDCE (Prop_fdce_C_Q)         0.518    -0.383 r  display_data_reg[1]/Q
+                         net (fo=1, routed)           4.291     3.908    LED_OBUF[1]
+    E19                  OBUF (Prop_obuf_I_O)         3.530     7.437 r  LED_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     7.437    LED[1]
+    E19                                                               r  LED[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.061ns  (logic 3.960ns (56.077%)  route 3.101ns (43.923%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.606    -0.906    rclk
+    SLICE_X63Y74         FDCE                                         r  display_data_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y74         FDCE (Prop_fdce_C_Q)         0.456    -0.450 r  display_data_reg[11]/Q
+                         net (fo=1, routed)           3.101     2.652    LED_OBUF[11]
+    U3                   OBUF (Prop_obuf_I_O)         3.504     6.155 r  LED_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     6.155    LED[11]
+    U3                                                                r  LED[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[10]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.026ns  (logic 3.981ns (56.667%)  route 3.045ns (43.333%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.606    -0.906    rclk
+    SLICE_X63Y74         FDCE                                         r  display_data_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X63Y74         FDCE (Prop_fdce_C_Q)         0.456    -0.450 r  display_data_reg[10]/Q
+                         net (fo=1, routed)           3.045     2.595    LED_OBUF[10]
+    W3                   OBUF (Prop_obuf_I_O)         3.525     6.120 r  LED_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     6.120    LED[10]
+    W3                                                                r  LED[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_data_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.755ns  (logic 4.026ns (59.605%)  route 2.729ns (40.395%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.611    -0.901    rclk
+    SLICE_X60Y71         FDCE                                         r  display_data_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X60Y71         FDCE (Prop_fdce_C_Q)         0.518    -0.383 r  display_data_reg[9]/Q
+                         net (fo=1, routed)           2.729     2.346    LED_OBUF[9]
+    V3                   OBUF (Prop_obuf_I_O)         3.508     5.854 r  LED_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     5.854    LED[9]
+    V3                                                                r  LED[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_async_fifo/r_empty_reg/C
+                            (rising edge-triggered cell FDPE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.642ns  (logic 3.963ns (59.668%)  route 2.679ns (40.332%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.609    -0.903    u_async_fifo/clk_out2
+    SLICE_X62Y72         FDPE                                         r  u_async_fifo/r_empty_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y72         FDPE (Prop_fdpe_C_Q)         0.456    -0.447 r  u_async_fifo/r_empty_reg/Q
+                         net (fo=15, routed)          2.679     2.232    LED_OBUF[13]
+    N3                   OBUF (Prop_obuf_I_O)         3.507     5.739 r  LED_OBUF[13]_inst/O
+                         net (fo=0)                   0.000     5.739    LED[13]
+    N3                                                                r  LED[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 read_toggle_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out2_clk_wiz_0  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            LED[15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.107ns  (logic 4.039ns (66.139%)  route 2.068ns (33.861%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.190ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.175ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT1)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out2_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout2_buf/O
+                         net (fo=53, routed)          1.606    -0.906    rclk
+    SLICE_X64Y75         FDCE                                         r  read_toggle_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y75         FDCE (Prop_fdce_C_Q)         0.518    -0.388 r  read_toggle_reg/Q
+                         net (fo=2, routed)           2.068     1.680    LED_OBUF[15]
+    L1                   OBUF (Prop_obuf_I_O)         3.521     5.202 r  LED_OBUF[15]_inst/O
+                         net (fo=0)                   0.000     5.202    LED[15]
+    L1                                                                r  LED[15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 write_toggle_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED[14]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.055ns  (logic 3.971ns (65.593%)  route 2.083ns (34.407%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.169ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout1_buf/O
+                         net (fo=67, routed)          1.612    -0.900    wclk
+    SLICE_X65Y71         FDCE                                         r  write_toggle_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y71         FDCE (Prop_fdce_C_Q)         0.456    -0.444 r  write_toggle_reg/Q
+                         net (fo=2, routed)           2.083     1.639    LED_OBUF[14]
+    P1                   OBUF (Prop_obuf_I_O)         3.515     5.155 r  LED_OBUF[14]_inst/O
+                         net (fo=0)                   0.000     5.155    LED[14]
+    P1                                                                r  LED[14] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_async_fifo/w_full_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_clk_wiz_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED[12]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.820ns  (logic 3.974ns (68.289%)  route 1.845ns (31.711%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.169ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    u_clk_wiz/inst/clk_in1
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  u_clk_wiz/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    u_clk_wiz/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  u_clk_wiz/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    u_clk_wiz/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  u_clk_wiz/inst/clkout1_buf/O
+                         net (fo=67, routed)          1.608    -0.904    u_async_fifo/clk_out1
+    SLICE_X65Y73         FDCE                                         r  u_async_fifo/w_full_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y73         FDCE (Prop_fdce_C_Q)         0.456    -0.448 r  u_async_fifo/w_full_reg/Q
+                         net (fo=5, routed)           1.845     1.398    LED_OBUF[12]
+    P3                   OBUF (Prop_obuf_I_O)         3.518     4.916 r  LED_OBUF[12]_inst/O
+                         net (fo=0)                   0.000     4.916    LED[12]
+    P3                                                                r  LED[12] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
