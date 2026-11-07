@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="async_fifo_concurrent_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="async_fifo_concurrent_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,576.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,576.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/async_fifo_concurrent_tb/wclk" type="logic">
+      <obj_property name="ElementShortName">wclk</obj_property>
+      <obj_property name="ObjectShortName">wclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/rclk" type="logic">
+      <obj_property name="ElementShortName">rclk</obj_property>
+      <obj_property name="ObjectShortName">rclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/wrst_n" type="logic">
+      <obj_property name="ElementShortName">wrst_n</obj_property>
+      <obj_property name="ObjectShortName">wrst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/rrst_n" type="logic">
+      <obj_property name="ElementShortName">rrst_n</obj_property>
+      <obj_property name="ObjectShortName">rrst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/w_en" type="logic">
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/w_data" type="array">
+      <obj_property name="ElementShortName">w_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/w_full" type="logic">
+      <obj_property name="ElementShortName">w_full</obj_property>
+      <obj_property name="ObjectShortName">w_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/w_accept" type="logic">
+      <obj_property name="ElementShortName">w_accept</obj_property>
+      <obj_property name="ObjectShortName">w_accept</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/r_en" type="logic">
+      <obj_property name="ElementShortName">r_en</obj_property>
+      <obj_property name="ObjectShortName">r_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/r_data" type="array">
+      <obj_property name="ElementShortName">r_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/r_empty" type="logic">
+      <obj_property name="ElementShortName">r_empty</obj_property>
+      <obj_property name="ObjectShortName">r_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/r_accept" type="logic">
+      <obj_property name="ElementShortName">r_accept</obj_property>
+      <obj_property name="ObjectShortName">r_accept</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/write_count" type="array">
+      <obj_property name="ElementShortName">write_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/read_count" type="array">
+      <obj_property name="ElementShortName">read_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/test_done" type="logic">
+      <obj_property name="ElementShortName">test_done</obj_property>
+      <obj_property name="ObjectShortName">test_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/FIFO_DEPTH" type="array">
+      <obj_property name="ElementShortName">FIFO_DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FIFO_DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_concurrent_tb/TOTAL_ITEMS" type="array">
+      <obj_property name="ElementShortName">TOTAL_ITEMS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_ITEMS[31:0]</obj_property>
+   </wvobject>
+</wave_config>
