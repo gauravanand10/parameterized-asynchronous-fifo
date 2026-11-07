@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="async_fifo_param_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="async_fifo_param_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="827.784 ns"></ZoomEndTime>
+      <Cursor1Time time="1,968.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="233"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/async_fifo_param_tb/done_a" type="logic">
+      <obj_property name="ElementShortName">done_a</obj_property>
+      <obj_property name="ObjectShortName">done_a</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_param_tb/done_b" type="logic">
+      <obj_property name="ElementShortName">done_b</obj_property>
+      <obj_property name="ObjectShortName">done_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_param_tb/done_c" type="logic">
+      <obj_property name="ElementShortName">done_c</obj_property>
+      <obj_property name="ObjectShortName">done_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/async_fifo_param_tb/done_d" type="logic">
+      <obj_property name="ElementShortName">done_d</obj_property>
+      <obj_property name="ObjectShortName">done_d</obj_property>
+   </wvobject>
+</wave_config>
