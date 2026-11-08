@@ -68,9 +68,7 @@ The FIFO synchronizes the read Gray pointer into the write domain and the write 
 
 ### Full and empty detection
 
-![Full and empty logic](images/architecture/fifo_full_empty_detection_logic_01.png)
-
-![Alternate full and empty logic diagram](images/architecture/fifo_full_empty_detection_logic_03.png)
+![Full and empty logic](images/architecture/fifo_full_empty_detection_logic.png)
 
 The write side declares full when the next write Gray pointer matches the synchronized read pointer with its two most significant bits inverted. The read side declares empty when the next read Gray pointer matches the synchronized write pointer.
 
