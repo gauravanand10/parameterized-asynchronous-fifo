@@ -1,0 +1,27 @@
+# Vivado generated work products
+**/.Xil/
+**/*.cache/
+**/*.gen/
+**/*.runs/
+**/*.sim/
+**/*.hw/
+**/*.ip_user_files/
+**/build/
+
+# Generated reports and temporary files
+*.jou
+*.log
+*.dcp
+*.ltx
+*.str
+*.wdb
+*.vcd
+*.pb
+*.obj
+*.rst
+*.sdb
+
+# Generated programming files are ignored by default.
+# Keep the reviewed deliverable bitstream in this repository.
+*.bit
+!bitstream/basys3_top.bit
